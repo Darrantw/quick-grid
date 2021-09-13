@@ -1,0 +1,73 @@
+/* ========================================
+
+      MediaQuery-Reporter-Styles
+
+=========================================*/
+
+body:after {
+  content: "less than 320";
+  font-size: 300%;
+  font-weight: bold;
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  background-color: hsla(1, 60%, 40%, 0.7);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 320) {
+  body:after {
+    content: "from 320 to 480";
+    background-color: hsla(90, 60%, 40%, 0.7);
+  }
+}
+
+@media only screen and (min-width: 480) {
+  body:after {
+    content: "from 480 to 768";
+    background-color: hsla(180, 60%, 40%, 0.7);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body:after {
+    content: "from 768 to 1024";
+    background-color: hsla(270, 60%, 40%, 0.7);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body:after {
+    content: "1024 and up";
+    background-color: hsla(360, 60%, 40%, 0.7);
+  }
+}
+
+
+/* ======= Experimental Basic Grid ======= */
+
+.container {
+
+  background-color: hsla(240, 60%, 40%, 0.2);
+  width: 100%;
+  height: 750px;
+  margin: 0 40px;
+}
+
+.row {
+  margin-left: -3%;
+}
+
+[class*="span"] {
+  display: inline;
+  margin-left: 3%;
+  float: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .span-one-third {
+    width: 30%;
+  }
+}
